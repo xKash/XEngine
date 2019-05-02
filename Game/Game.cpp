@@ -45,34 +45,6 @@ bool Game::Init() {
 
 	Mix_PlayMusic(bgm, -1);
 	Mix_VolumeMusic(20);	
-
-	/*SDL_Event ev;
-	if (ev.type == SDL_QUIT)
-		SDL_Quit();
-	else if (ev.type == SDL_KEYDOWN) {
-		while (SDL_PollEvent(&ev) != 0) {
-			switch (ev.key.keysym.sym) {
-			case SDLK_p:
-				if (!Mix_PlayingMusic())
-					Mix_PlayMusic(bgm, -1);
-				else if (Mix_PausedMusic())
-					Mix_ResumeMusic();
-				else
-					Mix_PausedMusic();
-				std::cout << "pressed p" << std::endl;
-				break;
-			case SDLK_o:
-				Mix_HaltMusic();
-				std::cout << "pressed o" << std::endl;
-				break;
-			case SDLK_w | SDLK_a | SDLK_s | SDLK_d:
-				Mix_PlayChannel(1, soundEffect, 1);
-				Mix_HaltChannel(1);
-				std::cout << "pressed w a s d" << std::endl;
-				break;
-			}
-		}
-	}*/
 	
 	return true;
 }
