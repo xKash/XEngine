@@ -2,11 +2,12 @@
 #define PLAYER_H
 
 #include "GameObject.h"
-#include "../../Audio/SoundManager.h"
+#include <SDL_mixer.h>
 
 class Player : public GameObject {
 public:
-	Player(Model * model_, glm::vec3 position_);
+	Player(Model * model_, glm::vec3 position_, GameObject* fox_);
+
 	~Player();
 
 	friend GameObject;
@@ -18,8 +19,9 @@ private:
 	float speedRotation;
 	float speedDefault;
 	float speedRotationDefault;
-
-	SoundManager* mSoundMgr;
+	Mix_Chunk* soundEffect;
+	Mix_Chunk* soundEffect2;
+	GameObject* fox;
 
 	SDL_Event SDLEvent;
 };
